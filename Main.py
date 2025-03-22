@@ -23,7 +23,7 @@ def short_link(message):
         log = open('log.txt', 'a')
         log.write(f'user id : {message.chat.id}, shorted the link : {link} into {res['shortenedUrl']} \n')
         bot.send_message(message.chat.id, 'لینک کوتاه شده : '+res['shortenedUrl'])
-        bot.send_message(message.chat.id, 'ساخته شده توسط گروه برنامه نویسی اس ای سی \n Site : sacgroup.ir \n Telegram : @sacgroupnws \n Bale : @sacgroup \n UrlShortenerBot v1.2 created with ♥ by [SACGroup](https://sacgroup.ir)', parse_mode='Markdown', disable_web_page_preview=True)
+        bot.send_message(message.chat.id, 'ساخته شده توسط گروه برنامه نویسی علاءالدین \n Site : sacgroup.ir \n Telegram : @AladdinBots \n Bale : [@AladdinBots](https://ble.ir/aladdinbots) \n UrlShortenerBot v1.2 created with ♥ by [SACGroup](https://sacgroup.ir)', parse_mode='Markdown', disable_web_page_preview=True)
     else:
         bot.send_message(message.chat.id, 'خطا در کوتاه کردن لینک')
 
@@ -33,15 +33,14 @@ def get_message(message):
     bot.register_next_step_handler(message, helpme)
 def helpme(message):
     bot.send_message(message.chat.id, 'در حال ارسال پیام شما به تیم پشتیبانی... لطفا منتظر بمانید')
-    bot.send_message(6326221369, f'سلام @CodeWizaard \n این پیام به عنوان مشکلی برای ربات URLShortenerBot به تو ارسال شده است \n User id : {message.chat.id}')
+    bot.send_message((YOUR_CHAT_ID), f'سلام @(USERNAME) \n این پیام به عنوان مشکلی برای ربات URLShortenerBot به تو ارسال شده است \n User id : {message.chat.id}')
     bot.forward_message(chat_id=6326221369, from_chat_id=message.chat.id, message_id=message.id)
     bot.send_message(message.chat.id, 'پیام ارسال شد. تیم پشتیبانی بعد از پیگیری مشکل به شما اطلاع خواهند داد')
 
 @bot.message_handler(commands=['donate'])
 def donate(message):
-    bot.send_message(message.chat.id, 'لطفا برای حمایت از ربات و گروه برنامه به کانال بله ما مراجعه کنید :')
-    bot.send_message(message.chat.id, 'id : @sacgroup', parse_mode='markdown')
-    bot.send_message(message.chat.id, 'بعد از حمایت مالی میتوانید صفحه پرداخت رو به تیم پشتیبانی ارسال کنید تا کد تخفیف مخصوص سایت دریافت کنید همچنین در صورتی که دسترسی به بله ندارید میتوانید به شما کارت ما واریز کنید \n 6037-9919-3209-7953 \n بانک ملی به نام ایدین رهبران')
+    bot.send_message(message.chat.id, '(پیام برای دونیت، هر چیزی که خودتان میخواهید جایگزاری کنید)')
+
 
 @bot.message_handler(commands=['notif'])
 def notif(message):
