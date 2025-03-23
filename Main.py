@@ -34,7 +34,7 @@ def get_message(message):
 def helpme(message):
     bot.send_message(message.chat.id, 'در حال ارسال پیام شما به تیم پشتیبانی... لطفا منتظر بمانید')
     bot.send_message((YOUR_CHAT_ID), f'سلام @(USERNAME) \n این پیام به عنوان مشکلی برای ربات URLShortenerBot به تو ارسال شده است \n User id : {message.chat.id}')
-    bot.forward_message(chat_id=6326221369, from_chat_id=message.chat.id, message_id=message.id)
+    bot.forward_message(chat_id=(YOUR_CHAT_ID), from_chat_id=message.chat.id, message_id=message.id)
     bot.send_message(message.chat.id, 'پیام ارسال شد. تیم پشتیبانی بعد از پیگیری مشکل به شما اطلاع خواهند داد')
 
 @bot.message_handler(commands=['donate'])
